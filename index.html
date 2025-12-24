@@ -64,7 +64,7 @@
         bgMusic.loop = true; bgMusic.volume = 1.0;
 
         const loader = new THREE.TextureLoader();
-        const photoFiles = ['./image5.jpeg', './image2.jpeg', './image3.jpeg', './image4.jpeg', './image1.jpeg'];
+        const photoFiles = ['./image5.jpeg', './image1.jpeg', './image3.jpeg', './image4.jpeg', './image1.jpeg'];
         const photoTextures = [];
         photoFiles.forEach((f, i) => photoTextures[i] = loader.load(f));
 
@@ -233,7 +233,7 @@
                 { x: 0, y: 22, z: 10, rot: -0.15 },     // Phải trên (gần)
                 { x: -17, y: 1, z: 15, rot: 0.15 },     // Trái trên (gần)
                 { x: 17, y: 1, z: 15, rot: 0.15 },      // Phải giữa trên
-                { x: -26, y: -20, z: 15, rot: 0.15 },       // Trái giữa trên
+                { x: -22, y: -20, z: 15, rot: 0.15 },       // Trái giữa trên
                 { x: 26, y: -20, z: 15, rot: 0.15 },      // Phải giữa
                 { x: -26, y: -5, z: 0, rot: 0.1 },     // Trái giữa dưới
                 { x: 27, y: -20, z: -3, rot: -0.15 },   // Phải dưới (xa)
