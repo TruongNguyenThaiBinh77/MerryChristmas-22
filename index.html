@@ -64,7 +64,7 @@
         bgMusic.loop = true; bgMusic.volume = 1.0;
 
         const loader = new THREE.TextureLoader();
-        const photoFiles = ['./image1.jpeg', './image2.jpeg', './image3.jpeg', './image4.jpeg', './image5.jpeg', './anh1.jpg', './anh2.jpg', './anh3.jpg'];
+        const photoFiles = ['./image5.jpeg', './image2.jpeg', './image3.jpeg', './image4.jpeg', './image1.jpeg'];
         const photoTextures = [];
         photoFiles.forEach((f, i) => photoTextures[i] = loader.load(f));
 
@@ -230,11 +230,11 @@
             // Vị trí ảnh ở 2 bên cây thông (phân bổ từ trên xuống dưới)
             const photoPositions = isMobile ? [
                 // Mobile: theo hình dạng cây thông (trên hẹp, dưới rộng)
-                { x: 12, y: 25, z: 0, rot: -0.15 },     // Phải trên (gần)
-                { x: -12, y: 25, z: 0, rot: 0.15 },     // Trái trên (gần)
-                { x: 19, y: 10, z: 3, rot: -0.1 },      // Phải giữa trên
-                { x: -19, y: 10, z: 3, rot: 0.1 },       // Trái giữa trên
-                { x: 26, y: -5, z: 0, rot: -0.1 },      // Phải giữa
+                { x: 0, y: 22, z: 10, rot: -0.15 },     // Phải trên (gần)
+                { x: -17, y: 1, z: 15, rot: 0.15 },     // Trái trên (gần)
+                { x: 17, y: 1, z: 15, rot: 0.15 },      // Phải giữa trên
+                { x: -26, y: -20, z: 15, rot: 0.15 },       // Trái giữa trên
+                { x: 26, y: -20, z: 15, rot: 0.15 },      // Phải giữa
                 { x: -26, y: -5, z: 0, rot: 0.1 },     // Trái giữa dưới
                 { x: 27, y: -20, z: -3, rot: -0.15 },   // Phải dưới (xa)
                 { x: -27, y: -20, z: -3, rot: 0.15 }    // Trái dưới (xa)
@@ -250,7 +250,7 @@
                 { x: -48, y: -25, z: -5, rot: 0.2 }    // Trái dưới
             ];
 
-            for(let i=0; i<8; i++) {
+            for(let i=0; i<5; i++) {
                 // anh1.jpg (index 5) là ảnh dọc, dùng geometry khác
                 const isPortraitPhoto = (i === 5);
                 const photoGeo = isPortraitPhoto ? new THREE.PlaneGeometry(photoSize * 0.75, photoSize * 1.2) : geo;
